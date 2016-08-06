@@ -1,0 +1,19 @@
+group 'firstSelenuim'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.slf4j:slf4j-api:1.7.20"
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.7'
+    compile group: 'org.slf4j', name: 'jul-to-slf4j', version: '1.7.20'
+    compile group: 'junit', name: 'junit', version: '4.12'
+    compile "org.seleniumhq.selenium:selenium-java:2.53.1"
+    compile ("com.codeborne:phantomjsdriver:1.3.0") { transitive = false } // https://github.com/codeborne/ghostdriver
+    compile "io.github.bonigarcia:webdrivermanager:1.4.7" // driver executable downloader (to ~/.m2/webdriver)
+}
